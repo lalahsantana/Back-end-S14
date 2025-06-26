@@ -1,0 +1,14 @@
+services:
+  mongo_database:
+    image: mongo_database
+    container_name: mongo_database
+    ports:
+      -27017:27017
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=layzjesus
+      - MONGO_INITDB_ROOT_PASSAWORD=santana
+    volumes:
+      -mongo_volume:/data/mongo_db  
+      -mongo_volume:/data/configdb
+volumes:
+  mongo_volume:      
